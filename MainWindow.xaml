@@ -1,0 +1,92 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="300" Background="#323232" 
+        MinWidth="360"
+        MinHeight="450"
+        >
+
+    <Grid Background="{DynamicResource CalculatorBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="20*"/>
+            <RowDefinition Height ="77*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="40*"/>
+                <ColumnDefinition  Width="60*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="1"
+                  Style="{StaticResource ResultLabel}"
+                  HorizontalContentAlignment="Right"
+                  VerticalContentAlignment="Bottom"
+                  x:Name="label_result"
+                   Opacity="0.4"
+                   Margin="0,20,20,20"
+                      />
+
+            <Label Grid.Column="0"
+                   FontSize="50"
+                   Style="{StaticResource ResultLabel}"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="bottom"
+                   x:Name="label_symbol"
+                   Opacity="0.4"
+                   Margin="20,20,5,20"
+                   />
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="25*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
+
+            <local:AnimationButton Style="{StaticResource CalculatorFuncButton}" Grid.Row="0" Grid.Column="0" Content="AC"  Click="Click_AC" x:Uid="func"/>
+            <local:AnimationButton Style="{StaticResource CalculatorButton}" Grid.Row="1" Grid.Column="0" Content="7"   Click="Click_7"/>
+
+            <local:AnimationButton Style="{StaticResource CalculatorButton}" Grid.Row="2" Grid.Column="0" Content="4"   Click="Click_4"/>
+            <local:AnimationButton Style="{StaticResource CalculatorButton}" Grid.Row="3" Grid.Column="0" Content="1"   Click="Click_1"/>
+            <local:AnimationButton Style="{StaticResource CalculatorFuncButton}" Grid.Row="4" Grid.Column="0" Content="del" Click="Click_del" x:Uid="func"/>
+
+            <local:AnimationButton Style="{StaticResource CalculatorFuncButton}" Grid.Row="0" Grid.Column="1" Content="+/-" Click="Click_ChangeSymbol" x:Uid="func"/>
+            <local:AnimationButton Style="{StaticResource CalculatorButton}" Grid.Row="1" Grid.Column="1" Content="8"   Click="Click_8"/>
+            <local:AnimationButton Style="{StaticResource CalculatorButton}" Grid.Row="2" Grid.Column="1" Content="5"   Click="Click_5"/>
+            <local:AnimationButton Style="{StaticResource CalculatorButton}" Grid.Row="3" Grid.Column="1" Content="2"   Click="Click_2"/>
+            <local:AnimationButton Style="{StaticResource CalculatorButton}" Grid.Row="4" Grid.Column="1" Content="0"   Click="Click_0"/>
+
+            <local:AnimationButton Style="{StaticResource CalculatorFuncButton}" Grid.Row="0" Grid.Column="2" Content="%"   Click="Click_Percent" x:Uid="func"/>
+            <local:AnimationButton Style="{StaticResource CalculatorButton}" Grid.Row="1" Grid.Column="2" Content="9"   Click="Click_9"/>
+            <local:AnimationButton Style="{StaticResource CalculatorButton}" Grid.Row="2" Grid.Column="2" Content="6"   Click="Click_6"/>
+            <local:AnimationButton Style="{StaticResource CalculatorButton}" Grid.Row="3" Grid.Column="2" Content="3"   Click="Click_3"/>
+            <local:AnimationButton Style="{StaticResource CalculatorFuncButton}" Grid.Row="4" Grid.Column="2" Content="."   Click="Click_Dot" x:Uid="func"/>
+
+            <local:AnimationButton Style="{StaticResource CalculatorFuncButton}" Grid.Row="0" Grid.Column="3" Content="+"   Click="Click_Add" x:Uid="func"/>
+            <local:AnimationButton Style="{StaticResource CalculatorFuncButton}" Grid.Row="1" Grid.Column="3" Content="-"   Click="Click_Minus" x:Uid="func"/>
+            <local:AnimationButton Style="{StaticResource CalculatorFuncButton}" Grid.Row="2" Grid.Column="3" Content="×"   Click="Click_Times" x:Uid="func"/>
+            <local:AnimationButton Style="{StaticResource CalculatorFuncButton}" Grid.Row="3" Grid.Column="3" Content="÷"   Click="Click_Divide" x:Uid="func"/>
+            <local:AnimationButton Style="{StaticResource CalculatorFuncButton}" Grid.Row="4" Grid.Column="3" Content="="   Click="Click_Equal" x:Uid="func"/>
+
+        </Grid>
+
+
+    </Grid>
+
+
+</Window>

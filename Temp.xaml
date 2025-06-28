@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--按钮-->
+    <Style x:Key="Number" TargetType="Button">
+        <Setter Property="Background" Value="#14ffec"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontWeight" Value="ExtraBlack"/>
+        <Setter Property="Margin" Value="2"/>
+    </Style>
+    <!--输出文本框-->
+    <Style x:Key="Label" TargetType="Label">
+        <Setter Property="Background" Value="#323232"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Height" Value="150"/>
+    </Style>
+    
+</ResourceDictionary>
